@@ -1,21 +1,462 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My First Live Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>College Information Website</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
-    <h1>Welcome to My Website</h1>
 
-    <p>This website is hosted live on the Internet.</p>
+<!-- ================= NAVBAR ================= -->
 
-    <h2>About Me</h2>
-    <p>I am a B.Tech CSE student.</p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
 
-    <h2>My Subjects</h2>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-    </ul>
+        <a class="navbar-brand fw-bold" href="#">
+            GUNI - ICT
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#departments">
+                        Departments
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallery">
+                        Gallery
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- ================= CAROUSEL ================= -->
+
+<div id="collegeCarousel"
+     class="carousel slide"
+     data-bs-ride="carousel">
+
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+
+        <button type="button"
+                data-bs-target="#collegeCarousel"
+                data-bs-slide-to="0"
+                class="active">
+        </button>
+
+        <button type="button"
+                data-bs-target="#collegeCarousel"
+                data-bs-slide-to="1">
+        </button>
+
+        <button type="button"
+                data-bs-target="#collegeCarousel"
+                data-bs-slide-to="2">
+        </button>
+
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+
+            <img src="https://images.unsplash.com/photo-1562774053-701939374585"
+                 class="d-block w-100"
+                 height="450"
+                 style="object-fit:cover;"
+                 alt="College Campus">
+
+            <div class="carousel-caption">
+                <h1>Welcome to GUNI - ICT</h1>
+                <p>Shaping Future Technology Professionals</p>
+
+                <a href="#about"
+                   class="btn btn-primary">
+                    Learn More
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="carousel-item">
+
+            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1"
+                 class="d-block w-100"
+                 height="450"
+                 style="object-fit:cover;"
+                 alt="Students">
+
+            <div class="carousel-caption">
+                <h1>Learn and Innovate</h1>
+                <p>Develop your technical and creative skills.</p>
+            </div>
+
+        </div>
+
+
+        <div class="carousel-item">
+
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72"
+                 class="d-block w-100"
+                 height="450"
+                 style="object-fit:cover;"
+                 alt="Technology">
+
+            <div class="carousel-caption">
+                <h1>Technology & Innovation</h1>
+                <p>Build solutions for tomorrow.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Previous -->
+    <button class="carousel-control-prev"
+            type="button"
+            data-bs-target="#collegeCarousel"
+            data-bs-slide="prev">
+
+        <span class="carousel-control-prev-icon"></span>
+
+    </button>
+
+
+    <!-- Next -->
+    <button class="carousel-control-next"
+            type="button"
+            data-bs-target="#collegeCarousel"
+            data-bs-slide="next">
+
+        <span class="carousel-control-next-icon"></span>
+
+    </button>
+
+</div>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="py-5">
+
+    <div class="container">
+
+        <div class="text-center">
+
+            <h2 class="text-primary">
+                About Our Institute
+            </h2>
+
+            <p class="lead">
+                Institute of Computer Technology provides
+                quality education in computer science and
+                emerging technologies.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DEPARTMENTS ================= -->
+
+<section id="departments"
+         class="bg-light py-5">
+
+    <div class="container">
+
+        <h2 class="text-center mb-4">
+            Our Departments
+        </h2>
+
+        <div class="row g-4">
+
+
+            <!-- Card 1 -->
+            <div class="col-md-4">
+
+                <div class="card h-100 shadow">
+
+                    <div class="card-body text-center">
+
+                        <i class="fa-solid fa-computer
+                                  fa-3x text-primary mb-3">
+                        </i>
+
+                        <h4 class="card-title">
+                            Computer Science
+                        </h4>
+
+                        <p class="card-text">
+                            Learn programming, data structures,
+                            databases and computer technologies.
+                        </p>
+
+                        <a href="#"
+                           class="btn btn-primary">
+                            Read More
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Card 2 -->
+            <div class="col-md-4">
+
+                <div class="card h-100 shadow">
+
+                    <div class="card-body text-center">
+
+                        <i class="fa-solid fa-network-wired
+                                  fa-3x text-success mb-3">
+                        </i>
+
+                        <h4 class="card-title">
+                            Information Technology
+                        </h4>
+
+                        <p class="card-text">
+                            Study networking, web development,
+                            databases and IT infrastructure.
+                        </p>
+
+                        <a href="#"
+                           class="btn btn-success">
+                            Read More
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Card 3 -->
+            <div class="col-md-4">
+
+                <div class="card h-100 shadow">
+
+                    <div class="card-body text-center">
+
+                        <i class="fa-solid fa-robot
+                                  fa-3x text-danger mb-3">
+                        </i>
+
+                        <h4 class="card-title">
+                            Artificial Intelligence
+                        </h4>
+
+                        <p class="card-text">
+                            Explore machine learning, AI,
+                            deep learning and intelligent systems.
+                        </p>
+
+                        <a href="#"
+                           class="btn btn-danger">
+                            Read More
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= GALLERY ================= -->
+
+<section id="gallery" class="py-5">
+
+    <div class="container">
+
+        <h2 class="text-center mb-4">
+            College Gallery
+        </h2>
+
+        <div class="row g-3">
+
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1564981797816-1043664bf78d"
+                     class="img-fluid rounded"
+                     alt="College">
+            </div>
+
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b"
+                     class="img-fluid rounded"
+                     alt="Students">
+            </div>
+
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+                     class="img-fluid rounded"
+                     alt="Computer Lab">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact"
+         class="bg-light py-5">
+
+    <div class="container">
+
+        <h2 class="text-center mb-4">
+            Contact Us
+        </h2>
+
+        <div class="row justify-content-center">
+
+            <div class="col-md-6">
+
+                <form>
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Name
+                        </label>
+
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Enter your name">
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Email
+                        </label>
+
+                        <input type="email"
+                               class="form-control"
+                               placeholder="Enter your email">
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Message
+                        </label>
+
+                        <textarea class="form-control"
+                                  rows="4"
+                                  placeholder="Enter your message">
+                        </textarea>
+                    </div>
+
+
+                    <button type="submit"
+                            class="btn btn-primary w-100">
+                        Submit
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="bg-dark text-white text-center py-4">
+
+    <p class="mb-2">
+        © 2026 GUNI - ICT. All Rights Reserved.
+    </p>
+
+    <a href="#" class="text-white me-3">
+        <i class="fab fa-facebook"></i>
+    </a>
+
+    <a href="#" class="text-white me-3">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+    <a href="#" class="text-white me-3">
+        <i class="fab fa-linkedin"></i>
+    </a>
+
+    <a href="#" class="text-white">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+</footer>
+
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
 </body>
 </html>
